@@ -129,8 +129,8 @@ for PASSWD in f.readlines():
 
 			s = "$" + p['const'] + "$" + p['salt'] + "$"
 
-			if crypt.crypt(d, s) == h[1]:
-				print "%s[%s]" % (p['user'],d)
+			if crypt.crypt(t, s) == h[1]:
+				print "%s[%s]" % (p['user'],t)
 				break
 if f:
 	f.close()

@@ -120,8 +120,8 @@ while (<PASSWD>) {
         $t =~ s/\%host\%/$host/g;
         $t =~ s/\%tsoh\%/$tsoh/g;
 
-        if (crypt($d,"\$$pass{'const'}\$$pass{'salt'}\$") eq $hash{'password'}) {
-            print "$pass{'user'}\[$d\]\n";
+        if (crypt($t,"\$$pass{'const'}\$$pass{'salt'}\$") eq $hash{'password'}) {
+            print "$pass{'user'}\[$t\]\n";
             last;
         }
     }
