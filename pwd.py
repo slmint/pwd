@@ -107,11 +107,11 @@ except:
 for PASSWD in f.readlines():  
 		if PASSWD.startswith('#'):
 			continue
-		h=PASSWD.split(':');
+		h=PASSWD.split(':')
 		if "!!" in h[1] or "*" in h[1]:
 			continue
 
-		pwd=h[1].split('$');
+		pwd=h[1].split('$')
 
 		p={'user':h[0],'const':pwd[1],'salt':pwd[2],'hash':pwd[3]}
 
