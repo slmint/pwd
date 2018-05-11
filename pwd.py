@@ -97,7 +97,7 @@ r'|+_)(',
 r'~!@#$%^&*()_+']
 
 host = os.popen('hostname -s').read().strip()
-tosh = host[::-1]
+tsoh = host[::-1]
 
 try:
 	f = open('/etc/shadow','r')
@@ -125,7 +125,7 @@ for PASSWD in f.readlines():
 			t = t.replace(r'%resu%',resu)
 
 			t = t.replace(r'%host%',host)
-			t = t.replace(r'%tosh%',tosh)
+			t = t.replace(r'%tsoh%',tsoh)
 
 			s = "$" + p['const'] + "$" + p['salt'] + "$"
 

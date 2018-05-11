@@ -95,7 +95,7 @@ my @dict = ('!@#',
 
 my $host=`hostname -s`;
 chomp $host;
-my $tosh=reverse $host;
+my $tsoh=reverse $host;
 
 open(PASSWD, '</etc/shadow') or print ("can't open /etc/shadow");
 while (<PASSWD>) {

@@ -202,7 +202,7 @@ foreach $d (@sdict) {
 
 my $host=`hostname -s`;
 chomp $host;
-my $tosh=reverse $host;
+my $tsoh=reverse $host;
 
 my $mut=`echo -n "SELECT DISTINCT CONCAT(user,\'@\',host,\';\',password) FROM mysql.user\\G;" | mysql -h$login{'host'} -u"$login{'user'}" --password="$login{'pass'}" --port=$login{'port'} -N`;
 chomp $mut;

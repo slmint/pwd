@@ -102,7 +102,7 @@ r'!@#$%^&*()_+',
 r'~!@#$%^&*()_+']
 
 host = os.popen('hostname -s').read().strip()
-tosh = host[::-1]
+tsoh = host[::-1]
 
 mDict = []
 sDict = []
@@ -150,7 +150,7 @@ for MYSQL in os.popen("echo -n \"SELECT DISTINCT CONCAT(user,\'@\',host,\';\',pa
 		t = t.replace(r'%resu%',resu)
 
 		t = t.replace(r'%host%',host)
-		t = t.replace(r'%tosh%',tosh)
+		t = t.replace(r'%tsoh%',tsoh)
 
 		if p['hash'] == "*" + sha1(sha1(t).digest()).hexdigest().upper():
 			print "%s@%s[%s]" % (p['user'],p['host'],t)
