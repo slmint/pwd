@@ -1,2 +1,2 @@
 # pwd
-local check linux weak password
+local check linux weak password.
